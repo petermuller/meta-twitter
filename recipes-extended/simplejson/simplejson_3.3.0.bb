@@ -12,10 +12,7 @@ SRC_URI[sha256sum]="7a8a6bd82e111976aeb06138316ab10847adf612925072eaff8512228bcf
 DEPENDS = "python"
 RDEPENDS_simplejson = "python"
 
-do_compile() {
-	python setup.py build
-}
-
 do_install() {
-	python setup.py install
+	install -m 0755 -d ${D}/usr
+	python setup.py install --prefix=${D}/usr
 }
