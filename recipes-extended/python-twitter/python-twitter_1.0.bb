@@ -12,10 +12,13 @@ SRC_URI[sha256sum]="e54e730bc40b969f35ed6ddfb310eac7256a2caac335a8971a46ae56beb7
 DEPENDS = "python"
 RDEPENDS_python-twitter = "python httplib2 python-oauth2 simplejson"
 
-do_compile() {
-	python setup.py build
-}
+inherit setuptools
 
-do_install() {
-	python setup.py install
+export BUILD_SYS
+export HOST_SYS
+export STAGING_INCDIR
+export STAGING_LIBDIR
+
+do_install_append() {
+  rm -f ${D}${libdir}/python*/site-packages/site.py*
 }
