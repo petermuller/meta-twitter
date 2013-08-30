@@ -1,7 +1,7 @@
 DESCRIPTION = "httplib2 support"
-LICENSE = "Httplib2 Software License"
+LICENSE = "MIT"
 SECTION = "console/tools"
-PR = "r3"
+PR = "r4"
 
 LIC_FILES_CHKSUM="file://README;beginline=98;md5=120ce862d2d29067fab9559797dd3674"
 
