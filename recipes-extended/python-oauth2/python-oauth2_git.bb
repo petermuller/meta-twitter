@@ -1,7 +1,7 @@
 DESCRIPTION = "python-oauth2 support"
 LICENSE = "MIT"
 SECTION = "console/tools"
-PR = "r3"
+PR = "r4"
 
 LIC_FILES_CHKSUM="file://LICENSE.txt;md5=8dc983d0d3d6a7652aabdb4a27b96b28"
 
@@ -13,8 +13,7 @@ SRC_URI[sha256sum] = "29ec85c208f863ffec5ce54d2d5e1134083ef491ab039018bb73ff6118
 
 S="${WORKDIR}/git"
 
-DEPENDS = "python"
-RDEPENDS_python-oauth2 = "python"
+RDEPENDS_${PN} += "python"
 
 inherit setuptools
 
